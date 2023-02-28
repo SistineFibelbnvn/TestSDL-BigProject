@@ -5,19 +5,32 @@
 #include <vector>
 
 struct Tileset{
-    int First, LastID;
-    int NumRows,NumCols;
+    int FirstID, LastID;
+    int RowCount,ColCount;
     int TileCount,TileSize;
+    std::string Name, Source;
 
 
 };
 
-class TileLayer
+using Tilesetlist = std::vector<Tileset>;
+using Tilemap=std::vector<std::vector<int> >;
+
+
+class TileLayer : public Layer
 {
     public:
-        TileLayer();
+        TileLayer(int tilesize, int rowcount, int colcount, Tilemap tilemap, Tilesetlist tilesets);
+        virtual void Render();
+        virtual void Update();
+        inline Tilemap GetTilemap(){return m_Tilemap;}
 
     private:
+        int m_TileSize;
+        int m_RowCount,m_ColCount;
+        Tilemap m_Tilemap;
+        Tilesetlist m_Tilesets;
+
 };
 
 #endif // TILELAYER_H
