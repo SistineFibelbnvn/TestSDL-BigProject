@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<texture>
+<texture id="1" source="images/Nurse1.png"/>
+<texture id="2" source="images/Nurse2.png"/>
+<texture id="3" source="images/Nurse3.png"/>
+<texture id="4" source="images/Nurse4.png"/>
+<texture id="bg" source="images/bg.png"/>
+</texture>

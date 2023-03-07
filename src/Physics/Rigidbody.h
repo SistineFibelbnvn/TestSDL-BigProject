@@ -38,7 +38,7 @@ class Rigidbody
             m_Position=m_Velocity*dt;}
 
 
-    private:
+    public:
         float m_Mass;
         float m_Gravity;
         Vector2D m_Force;
