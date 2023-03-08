@@ -4,8 +4,8 @@
 #include"Collider.h"
 #ifndef WAIFU_H
 #define WAIFU_H
-#define JUMP_TIME 10.0f
-#define JUMP_FORCE 10.0f
+#define JUMP_TIME 30.0f
+#define JUMP_FORCE 8.0f
 #define RUN_FORCE 4.0f
 #define ATTACK_TIME 20.0f
 class Waifu : public Character

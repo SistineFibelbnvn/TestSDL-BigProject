@@ -14,8 +14,8 @@ class Engine
         void Update();
         void Render();
         void Events();
-        inline int GetScreenWidth();
-        inline int GetScreenHeight();
+        int GetScreenWidth();
+        int GetScreenHeight();
         inline bool IsRunning(){return m_IsRunning;}
         inline SDL_Renderer* GetRenderer(){return m_Renderer;}
         inline GameMap* GetMap(){return m_LevelMap;}

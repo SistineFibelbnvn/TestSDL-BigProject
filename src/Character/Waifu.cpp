@@ -24,7 +24,6 @@ Waifu::Waifu(Properties* props):Character(props)
     m_Animation=new Animation();
     m_Animation->SetProps(m_TextureID,1,4,100);
     m_Rigidbody=new Rigidbody();
-    m_Rigidbody->SetGravity(4.0f);
 
 }
 
@@ -47,12 +46,19 @@ void Waifu::Update(float dt)
     m_IsRunning=false;
     m_IsCrouching=false;
     m_Rigidbody->UnSetForce();
+    Vector2D cam=Camera::GetInstance()->GetPosition();
     if(Input::GetInstance()->GetKeyDown(SDL_SCANCODE_A)){
-        m_Rigidbody->ApplyForceX(5*BACKWARD);
+        if(m_Transform->X<=cam.X)
+        {m_Rigidbody->ApplyForceX(cam.X-m_Transform->X);}
+        else{
+        m_Rigidbody->ApplyForceX(5*BACKWARD);}
         m_Animation->SetProps("3",1,4,100);
     }
     if(Input::GetInstance()->GetKeyDown(SDL_SCANCODE_D)){
-        m_Rigidbody->ApplyForceX(5*FORWARD);
+        if(m_Transform->X<=cam.X)
+        {m_Rigidbody->ApplyForceX(2*FORWARD+cam.X-m_Transform->X);}
+        else{
+        m_Rigidbody->ApplyForceX(5*FORWARD);}
         m_Animation->SetProps("2",1,4,100);
     }
     /*if(Input::GetInstance()->GetKeyDown(SDL_SCANCODE_W)){
@@ -73,19 +79,23 @@ void Waifu::Update(float dt)
         m_Rigidbody->ApplyForceY(UPWARD*m_JumpForce);
     }
     else{m_IsJumping=false;
-         m_JumpTime=JUMP_TIME;}
+         m_JumpTime=JUMP_TIME;
+        }
     m_Rigidbody->Update(dt);
     m_LastSafePosition.X=m_Transform->X;
     m_Transform->X+=m_Rigidbody->Position().X;
-    m_Collider->Set(m_Transform->X,m_Transform->Y,96,96);
+    if(m_Transform->X<=cam.X) m_Collider->Set(cam.X,m_Transform->Y,96,96);
+    else m_Collider->Set(m_Transform->X,m_Transform->Y,96,96);
     if(Collision::GetInstance()->MapCollision(m_Collider->Get())) {m_Transform->X=m_LastSafePosition.X;}
 
     m_Rigidbody->Update(dt);
     m_LastSafePosition.Y=m_Transform->Y;
     m_Transform->Y+=m_Rigidbody->Position().Y;
-    m_Collider->Set(m_Transform->X,m_Transform->Y,96,96);
+    if(m_Transform->X<=cam.X) m_Collider->Set(cam.X,m_Transform->Y,96,96);
+    else m_Collider->Set(m_Transform->X,m_Transform->Y,96,96);
     if(Collision::GetInstance()->MapCollision(m_Collider->Get())) {m_IsGrounded=true;m_Transform->Y=m_LastSafePosition.Y;}
-    else {m_IsGrounded=false;}
+    else m_IsGrounded=false;
+
     m_Origin->X=m_Transform->X+m_Width/2;
     m_Origin->Y=m_Transform->Y+m_Height/2;
     m_Animation->Update();

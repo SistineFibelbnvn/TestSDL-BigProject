@@ -65,9 +65,9 @@ void Engine::Update()
 
 void Engine::Render()
 {
-    //SDL_SetRenderDrawColor(m_Renderer,255, 0, 0, 0.3);
+    SDL_SetRenderDrawColor(m_Renderer,230, 230, 255, 0);
     SDL_RenderClear(m_Renderer);
-    TextureManager::GetInstance()->Draw("bg",0,0,GetScreenWidth(),GetScreenHeight());
+    //TextureManager::GetInstance()->Draw("bg",0,0,GetScreenWidth(),GetScreenHeight());
     m_LevelMap->Render();
     player->Draw();
     SDL_RenderPresent(m_Renderer);

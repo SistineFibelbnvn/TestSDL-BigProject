@@ -418,7 +418,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1678212601 source:c:\users\acer\desktop\testsdl\src\core\engine.cpp
+1678302752 source:c:\users\acer\desktop\testsdl\src\core\engine.cpp
 	<iostream>
 	"Engine.h"
 	"TextureManager.h"
@@ -428,7 +428,7 @@
 	"MapParser.h"
 	"Camera.h"
 
-1678212474 c:\users\acer\desktop\testsdl\src\core\engine.h
+1678295947 c:\users\acer\desktop\testsdl\src\core\engine.h
 	"SDL.h"
 	"SDL_image.h"
 	"GameMap.h"
@@ -440,12 +440,12 @@
 	<string>
 	"SDL.h"
 
-1677742564 c:\users\acer\desktop\testsdl\src\graphics\texturemanager.h
+1678298257 c:\users\acer\desktop\testsdl\src\graphics\texturemanager.h
 	<string>
 	"SDL.h"
 	<map>
 
-1678035440 source:c:\users\acer\desktop\testsdl\src\graphics\texturemanager.cpp
+1678299989 source:c:\users\acer\desktop\testsdl\src\graphics\texturemanager.cpp
 	"TextureManager.h"
 	"Engine.h"
 	"Camera.h"
@@ -454,13 +454,13 @@
 1676946110 source:c:\users\acer\desktop\testsdl\src\physics\vector2d.cpp
 	"Vector2D.h"
 
-1677644876 c:\users\acer\desktop\testsdl\src\physics\vector2d.h
+1678297318 c:\users\acer\desktop\testsdl\src\physics\vector2d.h
 	<iostream>
 
-1676988271 c:\users\acer\desktop\testsdl\src\physics\transform.h
+1678299741 c:\users\acer\desktop\testsdl\src\physics\transform.h
 	"Vector2D.h"
 
-1677741796 c:\users\acer\desktop\testsdl\src\character\waifu.h
+1678294988 c:\users\acer\desktop\testsdl\src\character\waifu.h
 	"Character.h"
 	"Animation.h"
 	"Rigidbody.h"
@@ -470,7 +470,7 @@
 	"GameObject.h"
 	<string>
 
-1677603058 c:\users\acer\desktop\testsdl\src\object\gameobject.h
+1678298171 c:\users\acer\desktop\testsdl\src\object\gameobject.h
 	"IObject.h"
 	"Transform.h"
 	"SDL.h"
@@ -478,7 +478,7 @@
 
 1676951558 c:\users\acer\desktop\testsdl\src\object\iobject.h
 
-1678212768 source:c:\users\acer\desktop\testsdl\src\character\waifu.cpp
+1678302916 source:c:\users\acer\desktop\testsdl\src\character\waifu.cpp
 	"Waifu.h"
 	"TextureManager.h"
 	"SDL.h"
@@ -487,15 +487,15 @@
 	"Collision.h"
 	"Collider.h"
 
-1676985268 c:\users\acer\desktop\testsdl\src\animation\animation.h
+1678298000 c:\users\acer\desktop\testsdl\src\animation\animation.h
 	"SDL.h"
 	<string>
 
-1677210779 source:c:\users\acer\desktop\testsdl\src\animation\animation.cpp
+1678297983 source:c:\users\acer\desktop\testsdl\src\animation\animation.cpp
 	"Animation.h"
 	"TextureManager.h"
 
-1677687589 c:\users\acer\desktop\testsdl\src\physics\rigidbody.h
+1678302999 c:\users\acer\desktop\testsdl\src\physics\rigidbody.h
 	"Vector2D.h"
 
 1677128494 c:\users\acer\desktop\testsdl\src\inputs\input.h
@@ -569,7 +569,7 @@
 	"Layer.h"
 	<vector>
 
-1677603154 c:\users\acer\desktop\testsdl\src\physics\point.h
+1678297224 c:\users\acer\desktop\testsdl\src\physics\point.h
 	<string>
 	<iostream>
 
@@ -579,7 +579,7 @@
 	"Vector2D.h"
 	"Engine.h"
 
-1678212474 source:c:\users\acer\desktop\testsdl\src\camera\camera.cpp
+1678296332 source:c:\users\acer\desktop\testsdl\src\camera\camera.cpp
 	"Camera.h"
 
 1677694956 source:c:\users\acer\desktop\testsdl\src\collision\collision.cpp

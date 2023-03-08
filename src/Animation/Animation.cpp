@@ -12,7 +12,7 @@ void Animation::SetProps(std::string textureID, int spritRow, int frameCount, in
     m_AnimSpeed=animSpeed;
     m_Flip=flip;
 }
-void Animation::Draw(float x, float y, int spritWidth, int spritHeight)
+void Animation::Draw(int x, int y, int spritWidth, int spritHeight)
 {
     TextureManager::GetInstance()->DrawFrame(m_TextureID,x,y,spritWidth,spritHeight,m_SpriteRow,m_SpriteFrame,m_Flip);
 }
