@@ -3,7 +3,7 @@
 MapParser* MapParser::s_Instance=nullptr;
 bool MapParser::Load()
 {
-    return Parse("MAP","images/maps/untiled.tmx");
+    return Parse("MAP","images/maps/untitled.tmx");
 
 }
 
