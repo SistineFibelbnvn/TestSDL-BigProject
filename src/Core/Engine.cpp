@@ -36,7 +36,7 @@ bool Engine::Init()
     TextureManager::GetInstance()->Load("3","images/Nurse3.png");
     TextureManager::GetInstance()->Load("4","images/Nurse4.png");
     TextureManager::GetInstance()->Load("bg","images/bg.png");*/
-    player=new Waifu(new Properties("1",100,300,270/4,75));
+    player=new Waifu(new Properties("Attacks",100,400));
     Camera::GetInstance()->SetTarget(player->GetOrigin());
     return m_IsRunning=true;
 }
@@ -65,7 +65,7 @@ void Engine::Update()
 
 void Engine::Render()
 {
-    SDL_SetRenderDrawColor(m_Renderer,230, 230, 255, 0);
+    SDL_SetRenderDrawColor(m_Renderer,230, 230, 255, 130);
     SDL_RenderClear(m_Renderer);
     //TextureManager::GetInstance()->Draw("bg",0,0,GetScreenWidth(),GetScreenHeight());
     m_LevelMap->Render();

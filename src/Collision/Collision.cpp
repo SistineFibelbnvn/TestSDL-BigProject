@@ -3,7 +3,7 @@
 
 Collision::Collision()
 {
-    m_CollisionLayer = (TileLayer*)Engine::GetInstance()->GetMap()->GetMapLayers().front();
+    m_CollisionLayer = (TileLayer*)Engine::GetInstance()->GetMap()->GetMapLayers().back();
     m_CollisionTilemap = m_CollisionLayer->GetTilemap();
 }
 
@@ -18,8 +18,8 @@ bool Collision::CheckCollision(SDL_Rect a, SDL_Rect b)
 bool Collision::MapCollision(SDL_Rect a)
 {
     int tileSize=32;
-    int RowCount=20;
-    int ColCount=120;
+    int RowCount=34;
+    int ColCount=1000;
     int left_tile=a.x/tileSize;
     int right_tile=(a.x+a.w)/tileSize;
     int top_tile=a.y/tileSize;

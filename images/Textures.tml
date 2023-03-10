@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <texture>
-<texture id="1" source="images/Nurse1.png"/>
-<texture id="2" source="images/Nurse2.png"/>
-<texture id="3" source="images/Nurse3.png"/>
-<texture id="4" source="images/Nurse4.png"/>
-<texture id="bg" source="images/bg.png"/>
+<texture id="Attack" source="images/Character/Attack.png"/>
+<texture id="AffterRe" source="images/Character/AffterRe.png"/>
+<texture id="Dash" source="images/Character/Dash.png"/>
+<texture id="DeAttack" source="images/Character/DeAttack.png"/>
+<texture id="Dejump" source="images/Character/Dejump.png"/>
+<texture id="DeRun" source="images/Character/DeRun.png"/>
+<texture id="Fall" source="images/Character/Fall.png"/>
+<texture id="GetAttackBack" source="images/Character/GetAttackBack.png"/>
+<texture id="Idle" source="images/Character/Idle.png"/>
+<texture id="Jump" source="images/Character/Jump.png"/>
+<texture id="Power" source="images/Character/Power.png"/>
+<texture id="QuickAttack" source="images/Character/QuickAttack.png"/>
+<texture id="Revive" source="images/Character/Revive.png"/>
+<texture id="Run" source="images/Character/Run.png"/>
+
 </texture>

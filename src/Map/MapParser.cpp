@@ -89,7 +89,5 @@ TileLayer* MapParser::ParseTileLayer(TiXmlElement* xmlLayer, Tilesetlist Tileset
         }
     }
     return (new TileLayer(tilesize,rowcount, colcount, tilemap, Tilesets));
-
-
 }
 

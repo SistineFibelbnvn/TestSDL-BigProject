@@ -7,7 +7,8 @@
 #define JUMP_TIME 30.0f
 #define JUMP_FORCE 8.0f
 #define RUN_FORCE 4.0f
-#define ATTACK_TIME 20.0f
+#define ATTACK_TIME1 20.0f
+#define ATTACK_TIME2 15.0f
 class Waifu : public Character
 {
     public:
@@ -24,10 +25,13 @@ class Waifu : public Character
         bool m_IsCrouching;
         bool m_IsFalling;
         bool m_IsAttacking;
-
+        bool m_IsHolding;
+        bool m_IsPower;
         float m_JumpTime;
         float m_JumpForce;
-        float m_AttackTime;
+        float m_AttackTime1;
+        float m_AttackTime2;
+
 
         Collider* m_Collider;
         Animation* m_Animation;

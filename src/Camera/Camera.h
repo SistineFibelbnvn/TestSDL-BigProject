@@ -21,6 +21,7 @@ class Camera
         Point* m_Target;
         SDL_Rect m_Viewbox;
         Vector2D m_Position;
+        float SpeedCamera=1.00;
         static Camera* s_Instance;
 };
 
