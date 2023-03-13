@@ -40,7 +40,6 @@ int Input::GetAxisKey(Axis axis)
             if(GetKeyDown(SDL_SCANCODE_D)) return 1;
             if(GetKeyDown(SDL_SCANCODE_A)) return -1;
             break;
-
         case VERTICAL:
             if(GetKeyDown(SDL_SCANCODE_W)) return 1;
             if(GetKeyDown(SDL_SCANCODE_S)) return -1;

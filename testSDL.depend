@@ -418,7 +418,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1678447816 source:c:\users\acer\desktop\testsdl\src\core\engine.cpp
+1678705450 source:c:\users\acer\desktop\testsdl\src\core\engine.cpp
 	<iostream>
 	"Engine.h"
 	"TextureManager.h"
@@ -460,7 +460,7 @@
 1678425437 c:\users\acer\desktop\testsdl\src\physics\transform.h
 	"Vector2D.h"
 
-1678455233 c:\users\acer\desktop\testsdl\src\character\waifu.h
+1678714994 c:\users\acer\desktop\testsdl\src\character\waifu.h
 	"Character.h"
 	"Animation.h"
 	"Rigidbody.h"
@@ -479,7 +479,7 @@
 
 1676951558 c:\users\acer\desktop\testsdl\src\object\iobject.h
 
-1678455167 source:c:\users\acer\desktop\testsdl\src\character\waifu.cpp
+1678718193 source:c:\users\acer\desktop\testsdl\src\character\waifu.cpp
 	"Waifu.h"
 	"TextureManager.h"
 	"SDL.h"
@@ -496,19 +496,19 @@
 	"Animation.h"
 	"TextureManager.h"
 
-1678302999 c:\users\acer\desktop\testsdl\src\physics\rigidbody.h
+1678712407 c:\users\acer\desktop\testsdl\src\physics\rigidbody.h
 	"Vector2D.h"
 
 1678452176 c:\users\acer\desktop\testsdl\src\inputs\input.h
 	"SDL.h"
 
-1678454910 source:c:\users\acer\desktop\testsdl\src\inputs\input.cpp
+1678718112 source:c:\users\acer\desktop\testsdl\src\inputs\input.cpp
 	"Input.h"
 	"Engine.h"
 
 1677216092 c:\users\acer\desktop\testsdl\src\timer\timer.h
 
-1677517192 source:c:\users\acer\desktop\testsdl\src\timer\timer.cpp
+1678677154 source:c:\users\acer\desktop\testsdl\src\timer\timer.cpp
 	"Timer.h"
 	"SDL.h"
 
@@ -556,7 +556,7 @@
 	"tinyxml.h"
 	<windows.h>
 
-1678440901 source:c:\users\acer\desktop\testsdl\src\map\mapparser.cpp
+1678674675 source:c:\users\acer\desktop\testsdl\src\map\mapparser.cpp
 	"MapParser.h"
 
 1677520613 c:\users\acer\desktop\testsdl\src\map\mapparser.h
@@ -580,7 +580,7 @@
 	"Vector2D.h"
 	"Engine.h"
 
-1678444894 source:c:\users\acer\desktop\testsdl\src\camera\camera.cpp
+1678642450 source:c:\users\acer\desktop\testsdl\src\camera\camera.cpp
 	"Camera.h"
 
 1678443855 source:c:\users\acer\desktop\testsdl\src\collision\collision.cpp

@@ -2,7 +2,7 @@
 #define RIGIDBODY_H
 #include "Vector2D.h"
 #define UNI_MASS 0.8f
-#define GRAVITY 5.0f
+#define GRAVITY 6.0f
 #define FORWARD 1
 #define BACKWARD -1
 #define UPWARD -1
@@ -34,8 +34,8 @@ class Rigidbody
         void Update(float dt){
             m_Accelaration.X=(m_Force.X+m_Friciton.X)/m_Mass;
             m_Accelaration.Y=(m_Gravity+m_Force.Y/m_Mass);
-            m_Velocity=m_Accelaration*dt;
-            m_Position=m_Velocity*dt;}
+            m_Velocity=m_Accelaration;
+            m_Position=m_Velocity;}
 
 
     public:

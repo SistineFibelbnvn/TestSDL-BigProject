@@ -4,11 +4,10 @@
 #include"Collider.h"
 #ifndef WAIFU_H
 #define WAIFU_H
-#define JUMP_TIME 30.0f
-#define JUMP_FORCE 8.0f
+#define JUMP_TIME 25.0f
+#define JUMP_FORCE 10.0f
 #define RUN_FORCE 4.0f
-#define ATTACK_TIME1 20.0f
-#define ATTACK_TIME2 15.0f
+
 class Waifu : public Character
 {
     public:
@@ -25,12 +24,16 @@ class Waifu : public Character
         bool m_IsCrouching;
         bool m_IsFalling;
         bool m_IsAttacking;
-        bool m_IsHolding;
-        bool m_IsPower;
+        bool m_IsDashing;
+        bool m_IsDashAttacking;
+        bool m_IsDeath;
+        bool m_IsHurting;
+        bool m_IsLaddering;
+        bool m_IsSliding;
+        bool m_IsWalling;
         float m_JumpTime;
         float m_JumpForce;
-        float m_AttackTime1;
-        float m_AttackTime2;
+
 
 
         Collider* m_Collider;

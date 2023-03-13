@@ -31,12 +31,7 @@ bool Engine::Init()
     }
     m_LevelMap=MapParser::GetInstance()->GetMaps("MAP");
     TextureManager::GetInstance()->ParseTexture("images/Textures.tml");
-    /*TextureManager::GetInstance()->Load("2","images/Nurse2.png");
-    TextureManager::GetInstance()->Load("1","images/Nurse1.png");
-    TextureManager::GetInstance()->Load("3","images/Nurse3.png");
-    TextureManager::GetInstance()->Load("4","images/Nurse4.png");
-    TextureManager::GetInstance()->Load("bg","images/bg.png");*/
-    player=new Waifu(new Properties("Attacks",100,400));
+    player=new Waifu(new Properties("Attacks",100,500));
     Camera::GetInstance()->SetTarget(player->GetOrigin());
     return m_IsRunning=true;
 }
@@ -67,7 +62,8 @@ void Engine::Render()
 {
     SDL_SetRenderDrawColor(m_Renderer,230, 230, 255, 130);
     SDL_RenderClear(m_Renderer);
-    //TextureManager::GetInstance()->Draw("bg",0,0,GetScreenWidth(),GetScreenHeight());
+    for(int i=0;i<10;i++){
+    TextureManager::GetInstance()->Draw("Background",GetScreenWidth()*i,-210,GetScreenWidth(),GetScreenHeight());}
     m_LevelMap->Render();
     player->Draw();
     SDL_RenderPresent(m_Renderer);
