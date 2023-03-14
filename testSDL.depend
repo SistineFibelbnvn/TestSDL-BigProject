@@ -418,7 +418,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1678705450 source:c:\users\acer\desktop\testsdl\src\core\engine.cpp
+1678804600 source:c:\users\acer\desktop\testsdl\src\core\engine.cpp
 	<iostream>
 	"Engine.h"
 	"TextureManager.h"
@@ -479,7 +479,7 @@
 
 1676951558 c:\users\acer\desktop\testsdl\src\object\iobject.h
 
-1678718193 source:c:\users\acer\desktop\testsdl\src\character\waifu.cpp
+1678805974 source:c:\users\acer\desktop\testsdl\src\character\waifu.cpp
 	"Waifu.h"
 	"TextureManager.h"
 	"SDL.h"
@@ -496,7 +496,7 @@
 	"Animation.h"
 	"TextureManager.h"
 
-1678712407 c:\users\acer\desktop\testsdl\src\physics\rigidbody.h
+1678791782 c:\users\acer\desktop\testsdl\src\physics\rigidbody.h
 	"Vector2D.h"
 
 1678452176 c:\users\acer\desktop\testsdl\src\inputs\input.h
@@ -574,16 +574,16 @@
 	<string>
 	<iostream>
 
-1678345737 c:\users\acer\desktop\testsdl\src\camera\camera.h
+1678802986 c:\users\acer\desktop\testsdl\src\camera\camera.h
 	"Point.h"
 	"SDL.h"
 	"Vector2D.h"
 	"Engine.h"
 
-1678642450 source:c:\users\acer\desktop\testsdl\src\camera\camera.cpp
+1678803095 source:c:\users\acer\desktop\testsdl\src\camera\camera.cpp
 	"Camera.h"
 
-1678443855 source:c:\users\acer\desktop\testsdl\src\collision\collision.cpp
+1678804165 source:c:\users\acer\desktop\testsdl\src\collision\collision.cpp
 	"Collision.h"
 	"Engine.h"
 

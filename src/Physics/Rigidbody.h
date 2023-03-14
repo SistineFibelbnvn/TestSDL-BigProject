@@ -1,7 +1,7 @@
 #ifndef RIGIDBODY_H
 #define RIGIDBODY_H
 #include "Vector2D.h"
-#define UNI_MASS 0.8f
+#define UNI_MASS 0.85f
 #define GRAVITY 6.0f
 #define FORWARD 1
 #define BACKWARD -1
