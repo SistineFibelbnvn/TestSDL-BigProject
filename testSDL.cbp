@@ -26,6 +26,8 @@
 					<Add directory="src/Vender/tinyxml-master" />
 					<Add directory="src/Camera" />
 					<Add directory="src/Collision" />
+					<Add directory="src/Widgets" />
+					<Add directory="src/Sounds" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -47,6 +49,8 @@
 					<Add directory="src/Map" />
 					<Add directory="src/Camera" />
 					<Add directory="src/Collision" />
+					<Add directory="src/Widgets" />
+					<Add directory="src/Sounds" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -73,6 +77,10 @@
 		<Unit filename="src/Animation/Animation.h" />
 		<Unit filename="src/Camera/Camera.cpp" />
 		<Unit filename="src/Camera/Camera.h" />
+		<Unit filename="src/Character/Boss1.cpp" />
+		<Unit filename="src/Character/Boss1.h" />
+		<Unit filename="src/Character/Boss2.cpp" />
+		<Unit filename="src/Character/Boss2.h" />
 		<Unit filename="src/Character/Character.h" />
 		<Unit filename="src/Character/Waifu.cpp" />
 		<Unit filename="src/Character/Waifu.h" />
@@ -97,6 +105,8 @@
 		<Unit filename="src/Physics/Rigidbody.h" />
 		<Unit filename="src/Physics/Transform.h" />
 		<Unit filename="src/Physics/Vector2D.h" />
+		<Unit filename="src/Sounds/SoundManager.cpp" />
+		<Unit filename="src/Sounds/SoundManager.h" />
 		<Unit filename="src/Timer/Timer.cpp" />
 		<Unit filename="src/Timer/Timer.h" />
 		<Unit filename="src/Vender/tinyxml-master/tinystr.cpp" />
@@ -105,6 +115,7 @@
 		<Unit filename="src/Vender/tinyxml-master/tinyxml.h" />
 		<Unit filename="src/Vender/tinyxml-master/tinyxmlerror.cpp" />
 		<Unit filename="src/Vender/tinyxml-master/tinyxmlparser.cpp" />
+		<Unit filename="src/Widgets/Button.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

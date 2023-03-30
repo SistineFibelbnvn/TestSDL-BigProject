@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Sounds>	
+<music id="track" source ="images/maps/track.ogg"/>
+<effect id="Jumping" source ="images/Character/Jumping.ogg"/>
+<effect id="Sliding" source ="images/Character/Sliding.ogg"/>
+<effect id="Attack" source ="images/Character/Attack.ogg"/>
+<effect id="DashAttack" source ="images/Character/DashAttack.ogg"/>
+<effect id="Running" source ="images/Character/Running.ogg"/>
+</Sounds>

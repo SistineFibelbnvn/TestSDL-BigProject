@@ -14,6 +14,21 @@
 <texture id="Run" source="images/Character/Run.png"/>
 <texture id="Crouch" source="images/Character/Crouch.png"/>
 <texture id="WallSlide" source="images/Character/WallSlide.png"/>
-<texture id="Background" source="images/maps/Background.png"/>
+<texture id="Castle" source="images/maps/Castle.png"/>
+<texture id="SatanBg" source="images/maps/SatanBg.png"/>
+<texture id="Ice" source="images/maps/Ice.png"/>
+
+<texture id="B1Attack" source="images/Boss1/B1Attack.png"/>
+<texture id="B1Death" source="images/Boss1/B1Death.png"/>
+<texture id="B1Idle" source="images/Boss1/B1Idle.png"/>
+<texture id="B1Hurt" source="images/Boss1/B1Hurt.png"/>
+<texture id="B1Walk" source="images/Boss1/B1Walk.png"/>
+
+<texture id="B2Cleave" source="images/Boss2/B2Cleave.png"/>
+<texture id="B2Death1" source="images/Boss2/B2Death1.png"/>
+<texture id="B2Death2" source="images/Boss2/B2Death2.png"/>
+<texture id="B2Idle" source="images/Boss2/B2Idle.png"/>
+<texture id="B2Hurt" source="images/Boss2/B2Hurt.png"/>
+<texture id="B2Walk" source="images/Boss2/B2Walk.png"/>
 
 </texture>

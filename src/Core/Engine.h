@@ -3,7 +3,7 @@
 #include "SDL.h"
 #include "SDL_image.h"
 #include "GameMap.h"
-
+#include"GameObject.h"
 class Engine
 {
     public:
@@ -26,6 +26,7 @@ class Engine
         SDL_Renderer* m_Renderer=nullptr;
         GameMap* m_LevelMap;
         static Engine* s_Instance;
+        std::vector<GameObject*> m_GameObject;
 };
 
 #endif // ENGINE_H

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1678212430 source:c:\users\acer\desktop\testsdl\main.cpp
+1680161037 source:c:\users\acer\desktop\testsdl\main.cpp
 	<iostream>
 	<SDL.h>
 	<SDL_image.h>
@@ -418,7 +418,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1678804600 source:c:\users\acer\desktop\testsdl\src\core\engine.cpp
+1680113852 source:c:\users\acer\desktop\testsdl\src\core\engine.cpp
 	<iostream>
 	"Engine.h"
 	"TextureManager.h"
@@ -427,11 +427,14 @@
 	"Timer.h"
 	"MapParser.h"
 	"Camera.h"
+	"Boss1.h"
+	"Boss2.h"
 
-1678361018 c:\users\acer\desktop\testsdl\src\core\engine.h
+1678898290 c:\users\acer\desktop\testsdl\src\core\engine.h
 	"SDL.h"
 	"SDL_image.h"
 	"GameMap.h"
+	"GameObject.h"
 
 1676787734 source:c:\users\acer\desktop\testsdl\texturemanager.cpp
 	"TextureManager.h"
@@ -440,16 +443,17 @@
 	<string>
 	"SDL.h"
 
-1678298257 c:\users\acer\desktop\testsdl\src\graphics\texturemanager.h
+1680113671 c:\users\acer\desktop\testsdl\src\graphics\texturemanager.h
 	<string>
 	"SDL.h"
 	<map>
 
-1678441156 source:c:\users\acer\desktop\testsdl\src\graphics\texturemanager.cpp
+1680113684 source:c:\users\acer\desktop\testsdl\src\graphics\texturemanager.cpp
 	"TextureManager.h"
 	"Engine.h"
 	"Camera.h"
 	"tinyxml.h"
+	"SoundManager.h"
 
 1676946110 source:c:\users\acer\desktop\testsdl\src\physics\vector2d.cpp
 	"Vector2D.h"
@@ -460,7 +464,7 @@
 1678425437 c:\users\acer\desktop\testsdl\src\physics\transform.h
 	"Vector2D.h"
 
-1678714994 c:\users\acer\desktop\testsdl\src\character\waifu.h
+1680161134 c:\users\acer\desktop\testsdl\src\character\waifu.h
 	"Character.h"
 	"Animation.h"
 	"Rigidbody.h"
@@ -477,9 +481,9 @@
 	"Point.h"
 	"Animation.h"
 
-1676951558 c:\users\acer\desktop\testsdl\src\object\iobject.h
+1678951329 c:\users\acer\desktop\testsdl\src\object\iobject.h
 
-1678805974 source:c:\users\acer\desktop\testsdl\src\character\waifu.cpp
+1680161217 source:c:\users\acer\desktop\testsdl\src\character\waifu.cpp
 	"Waifu.h"
 	"TextureManager.h"
 	"SDL.h"
@@ -487,6 +491,7 @@
 	"Camera.h"
 	"Collision.h"
 	"Collider.h"
+	"SoundManager.h"
 
 1678454441 c:\users\acer\desktop\testsdl\src\animation\animation.h
 	"SDL.h"
@@ -496,7 +501,7 @@
 	"Animation.h"
 	"TextureManager.h"
 
-1678791782 c:\users\acer\desktop\testsdl\src\physics\rigidbody.h
+1678807920 c:\users\acer\desktop\testsdl\src\physics\rigidbody.h
 	"Vector2D.h"
 
 1678452176 c:\users\acer\desktop\testsdl\src\inputs\input.h
@@ -556,10 +561,11 @@
 	"tinyxml.h"
 	<windows.h>
 
-1678674675 source:c:\users\acer\desktop\testsdl\src\map\mapparser.cpp
+1680113671 source:c:\users\acer\desktop\testsdl\src\map\mapparser.cpp
 	"MapParser.h"
+	"SoundManager.h"
 
-1677520613 c:\users\acer\desktop\testsdl\src\map\mapparser.h
+1680113421 c:\users\acer\desktop\testsdl\src\map\mapparser.h
 	<map>
 	<string>
 	"GameMap.h"
@@ -574,16 +580,16 @@
 	<string>
 	<iostream>
 
-1678802986 c:\users\acer\desktop\testsdl\src\camera\camera.h
+1678807920 c:\users\acer\desktop\testsdl\src\camera\camera.h
 	"Point.h"
 	"SDL.h"
 	"Vector2D.h"
 	"Engine.h"
 
-1678803095 source:c:\users\acer\desktop\testsdl\src\camera\camera.cpp
+1679686021 source:c:\users\acer\desktop\testsdl\src\camera\camera.cpp
 	"Camera.h"
 
-1678804165 source:c:\users\acer\desktop\testsdl\src\collision\collision.cpp
+1679681892 source:c:\users\acer\desktop\testsdl\src\collision\collision.cpp
 	"Collision.h"
 	"Engine.h"
 
@@ -594,9 +600,48 @@
 	"TileLayer.h"
 	<vector>
 
-1678361321 c:\users\acer\desktop\testsdl\src\physics\collider.h
+1680114967 c:\users\acer\desktop\testsdl\src\physics\collider.h
 	"SDL.h"
 
 1678209380 c:\users\acer\desktop\testsdl\src\graphics\screensize.h
 	"SDL.h"
+
+1678951150 source:c:\users\acer\desktop\testsdl\src\character\boss1.cpp
+	"Boss1.h"
+	"TextureManager.h"
+	"SDL.h"
+	"Input.h"
+	"Camera.h"
+	"Collision.h"
+	"Collider.h"
+
+1678949983 c:\users\acer\desktop\testsdl\src\character\boss1.h
+	"Character.h"
+	"Animation.h"
+	"Rigidbody.h"
+	"Collider.h"
+
+1678951198 source:c:\users\acer\desktop\testsdl\src\character\boss2.cpp
+	"Boss2.h"
+	"TextureManager.h"
+	"SDL.h"
+	"Input.h"
+	"Camera.h"
+	"Collision.h"
+	"Collider.h"
+
+1678949783 c:\users\acer\desktop\testsdl\src\character\boss2.h
+	"Character.h"
+	"Animation.h"
+	"Rigidbody.h"
+	"Collider.h"
+
+1680111992 source:c:\users\acer\desktop\testsdl\src\sounds\soundmanager.cpp
+	"SoundManager.h"
+
+1680111229 c:\users\acer\desktop\testsdl\src\sounds\soundmanager.h
+	<map>
+	<string>
+	<iostream>
+	<SDL_mixer.h>
 

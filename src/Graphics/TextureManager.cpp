@@ -2,6 +2,7 @@
 #include "Engine.h"
 #include "Camera.h"
 #include "tinyxml.h"
+#include "SoundManager.h"
 TextureManager* TextureManager::s_Instance=nullptr;
 bool TextureManager::Load(std::string id, std::string filename)
 {
@@ -36,7 +37,28 @@ bool TextureManager::ParseTexture(std::string source)
     }
     return true;
 }
+bool TextureManager::ParseSound(std::string source)
+{
+    TiXmlDocument xml;
+    xml.LoadFile(source);
+    if(xml.Error()){
+        std::cout<<"Failed to load:"<<source<<std::endl;
+        return false;
+    }
+    TiXmlElement* root = xml.RootElement();
+    for(TiXmlElement* e=root->FirstChildElement(); e!=nullptr; e=e->NextSiblingElement()){
+        if(e->Value()==std::string("effect")){
+            SoundManager::GetInstance()->LoadEffect(e->Attribute("id"),e->Attribute("source"));
+            continue;
+        }
+        if(e->Value()==std::string("music")){
+            SoundManager::GetInstance()->LoadMusic(e->Attribute("id"),e->Attribute("source"));
+            continue;
+        }
+    }
+    return true;
 
+}
 void TextureManager::Drop(std::string id)
 {
     SDL_DestroyTexture(m_TextureMap[id]);
@@ -50,7 +72,6 @@ void TextureManager::Clean()
     for(it = m_TextureMap.begin();it !=m_TextureMap.end(); it++)
         SDL_DestroyTexture(it->second);
     m_TextureMap.clear();
-    SDL_Log("Texture map cleaned");
 }
 
 void TextureManager::Draw(std::string id, int x, int y, int width, int height, SDL_RendererFlip flip)
@@ -64,8 +85,6 @@ void TextureManager::DrawFrame(std::string id, int x, int y, int width, int heig
 {
     Vector2D cam=Camera::GetInstance()->GetPosition();
     SDL_Rect srcRect = {width*frame, height*(row-1), width, height};
-    //if(x<=cam.X) {x=cam.X;}
-    if(x>=cam.X+Engine::GetInstance()->GetScreenWidth()-50){x=cam.X+Engine::GetInstance()->GetScreenWidth()-55;}
     SDL_Rect dstRect = {x-cam.X, y-cam.Y, width, height};
     SDL_RenderCopyEx(Engine::GetInstance()->GetRenderer(), m_TextureMap[id], &srcRect, &dstRect, 0, nullptr, flip);
 }
@@ -76,4 +95,9 @@ void TextureManager::DrawTile(std::string tilesetID, int tilesize, int x, int y,
     SDL_Rect srcRect = {tilesize*frame, tilesize*row, tilesize, tilesize};
     SDL_RenderCopyEx(Engine::GetInstance()->GetRenderer(), m_TextureMap[tilesetID], &srcRect, &dstRect, 0, 0, flip);
 }
+void TextureManager::QueryTexture(std::string id, int* out_w, int* out_h)
+{
+    SDL_QueryTexture(m_TextureMap[id],NULL,NULL,out_w,out_h);
+}
+
 

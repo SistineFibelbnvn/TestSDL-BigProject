@@ -1,5 +1,5 @@
 #include "MapParser.h"
-
+#include "SoundManager.h"
 MapParser* MapParser::s_Instance=nullptr;
 bool MapParser::Load()
 {

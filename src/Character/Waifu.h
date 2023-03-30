@@ -4,8 +4,8 @@
 #include"Collider.h"
 #ifndef WAIFU_H
 #define WAIFU_H
-#define JUMP_TIME 25.0f
-#define JUMP_FORCE 10.0f
+#define JUMP_TIME 20.0f
+#define JUMP_FORCE 9.0f
 #define RUN_FORCE 4.0f
 
 class Waifu : public Character
@@ -16,7 +16,6 @@ class Waifu : public Character
         virtual void Update(float dt);
         virtual void Clean();
         virtual void State();
-
     private:
         bool m_IsJumping;
         bool m_IsGrounded;
@@ -31,6 +30,8 @@ class Waifu : public Character
         bool m_IsLaddering;
         bool m_IsSliding;
         bool m_IsWalling;
+        bool m_IsMusic;
+        bool m_IsSoundEffect;
         float m_JumpTime;
         float m_JumpForce;
 
