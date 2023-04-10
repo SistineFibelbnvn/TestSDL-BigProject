@@ -39,7 +39,6 @@
 					<Add option="-O2" />
 					<Add directory="src/Core" />
 					<Add directory="src/Graphics" />
-					<Add directory="./" />
 					<Add directory="src/Physics" />
 					<Add directory="src/Object" />
 					<Add directory="src/Character" />
@@ -51,6 +50,7 @@
 					<Add directory="src/Collision" />
 					<Add directory="src/Widgets" />
 					<Add directory="src/Sounds" />
+					<Add directory="src/Vender/tinyxml-master" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -115,7 +115,6 @@
 		<Unit filename="src/Vender/tinyxml-master/tinyxml.h" />
 		<Unit filename="src/Vender/tinyxml-master/tinyxmlerror.cpp" />
 		<Unit filename="src/Vender/tinyxml-master/tinyxmlparser.cpp" />
-		<Unit filename="src/Widgets/Button.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

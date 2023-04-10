@@ -3,13 +3,13 @@
 #include <string>
 #include "SDL.h"
 #include <map>
-
+#include "SDL_ttf.h"
 class TextureManager
 {
     public:
 
         static TextureManager* GetInstance(){return s_Instance = (s_Instance!=nullptr)? s_Instance : new TextureManager();}
-
+        bool loadFromRenderedText( std::string textureText, SDL_Color textColor );
         bool Load(std::string id, std::string filename);
         bool ParseTexture(std::string source);
         bool ParseSound(std::string source);

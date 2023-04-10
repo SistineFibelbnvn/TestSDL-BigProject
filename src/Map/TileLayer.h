@@ -24,6 +24,7 @@ class TileLayer : public Layer
         virtual void Render();
         virtual void Update();
         inline Tilemap GetTilemap(){return m_Tilemap;}
+        int GetTileSize(){return m_TileSize;}
 
     private:
         int m_TileSize;

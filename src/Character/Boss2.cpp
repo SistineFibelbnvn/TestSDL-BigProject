@@ -16,6 +16,7 @@ Boss2::Boss2(Properties* props): Character(props)
     m_Collider->SetBuffer(-180,-20,60,-20);
     m_Animation=new Animation();
     m_Rigidbody=new Rigidbody();
+    m_Flip=SDL_FLIP_NONE;
 }
 
 void Boss2::Draw()

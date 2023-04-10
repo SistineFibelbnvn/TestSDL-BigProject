@@ -6,7 +6,7 @@
 #include <SDL_mixer.h>
 
 #define FREQ 44100
-#define CHUNK_SIZE 2040
+#define CHUNK_SIZE 2048
 using EffectMap=std::map<std::string,Mix_Chunk*>;
 using MusicMap=std::map<std::string,Mix_Music*>;
 

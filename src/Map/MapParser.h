@@ -6,6 +6,7 @@
 #include "GameMap.h"
 #include "TileLayer.h"
 #include "tinyxml.h"
+
 class MapParser
 {
     public:

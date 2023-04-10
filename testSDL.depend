@@ -418,7 +418,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1680113852 source:c:\users\acer\desktop\testsdl\src\core\engine.cpp
+1681168084 source:c:\users\acer\desktop\testsdl\src\core\engine.cpp
 	<iostream>
 	"Engine.h"
 	"TextureManager.h"
@@ -430,7 +430,7 @@
 	"Boss1.h"
 	"Boss2.h"
 
-1678898290 c:\users\acer\desktop\testsdl\src\core\engine.h
+1680763320 c:\users\acer\desktop\testsdl\src\core\engine.h
 	"SDL.h"
 	"SDL_image.h"
 	"GameMap.h"
@@ -443,12 +443,13 @@
 	<string>
 	"SDL.h"
 
-1680113671 c:\users\acer\desktop\testsdl\src\graphics\texturemanager.h
+1681157811 c:\users\acer\desktop\testsdl\src\graphics\texturemanager.h
 	<string>
 	"SDL.h"
 	<map>
+	"SDL_ttf.h"
 
-1680113684 source:c:\users\acer\desktop\testsdl\src\graphics\texturemanager.cpp
+1681157811 source:c:\users\acer\desktop\testsdl\src\graphics\texturemanager.cpp
 	"TextureManager.h"
 	"Engine.h"
 	"Camera.h"
@@ -458,13 +459,13 @@
 1676946110 source:c:\users\acer\desktop\testsdl\src\physics\vector2d.cpp
 	"Vector2D.h"
 
-1678425437 c:\users\acer\desktop\testsdl\src\physics\vector2d.h
+1680765466 c:\users\acer\desktop\testsdl\src\physics\vector2d.h
 	<iostream>
 
 1678425437 c:\users\acer\desktop\testsdl\src\physics\transform.h
 	"Vector2D.h"
 
-1680161134 c:\users\acer\desktop\testsdl\src\character\waifu.h
+1680777680 c:\users\acer\desktop\testsdl\src\character\waifu.h
 	"Character.h"
 	"Animation.h"
 	"Rigidbody.h"
@@ -474,16 +475,16 @@
 	"GameObject.h"
 	<string>
 
-1678430202 c:\users\acer\desktop\testsdl\src\object\gameobject.h
+1680808760 c:\users\acer\desktop\testsdl\src\object\gameobject.h
 	"IObject.h"
 	"Transform.h"
 	"SDL.h"
 	"Point.h"
 	"Animation.h"
 
-1678951329 c:\users\acer\desktop\testsdl\src\object\iobject.h
+1680178443 c:\users\acer\desktop\testsdl\src\object\iobject.h
 
-1680161217 source:c:\users\acer\desktop\testsdl\src\character\waifu.cpp
+1681167840 source:c:\users\acer\desktop\testsdl\src\character\waifu.cpp
 	"Waifu.h"
 	"TextureManager.h"
 	"SDL.h"
@@ -517,31 +518,31 @@
 	"Timer.h"
 	"SDL.h"
 
-1678440901 source:c:\users\acer\desktop\testsdl\src\map\tilelayer.cpp
+1680808574 source:c:\users\acer\desktop\testsdl\src\map\tilelayer.cpp
 	"TileLayer.h"
 	"TextureManager.h"
 
-1677518084 c:\users\acer\desktop\testsdl\src\map\tilelayer.h
+1680722617 c:\users\acer\desktop\testsdl\src\map\tilelayer.h
 	"Layer.h"
 	<string>
 	<vector>
 
 1678445949 c:\users\acer\desktop\testsdl\src\map\layer.h
 
-1677516081 source:c:\users\acer\desktop\testsdl\src\vender\tinyxml-master\tinystr.cpp
+1680769860 source:c:\users\acer\desktop\testsdl\src\vender\tinyxml-master\tinystr.cpp
 	"tinystr.h"
 
-1677516081 c:\users\acer\desktop\testsdl\src\vender\tinyxml-master\tinystr.h
+1680769860 c:\users\acer\desktop\testsdl\src\vender\tinyxml-master\tinystr.h
 	<assert.h>
 	<string.h>
 
-1677516081 source:c:\users\acer\desktop\testsdl\src\vender\tinyxml-master\tinyxml.cpp
+1680769860 source:c:\users\acer\desktop\testsdl\src\vender\tinyxml-master\tinyxml.cpp
 	<ctype.h>
 	<sstream>
 	<iostream>
 	"tinyxml.h"
 
-1677516081 c:\users\acer\desktop\testsdl\src\vender\tinyxml-master\tinyxml.h
+1680769860 c:\users\acer\desktop\testsdl\src\vender\tinyxml-master\tinyxml.h
 	<ctype.h>
 	<stdio.h>
 	<stdlib.h>
@@ -552,20 +553,20 @@
 	<sstream>
 	"tinystr.h"
 
-1677516081 source:c:\users\acer\desktop\testsdl\src\vender\tinyxml-master\tinyxmlerror.cpp
+1680769860 source:c:\users\acer\desktop\testsdl\src\vender\tinyxml-master\tinyxmlerror.cpp
 	"tinyxml.h"
 
-1677516081 source:c:\users\acer\desktop\testsdl\src\vender\tinyxml-master\tinyxmlparser.cpp
+1680769860 source:c:\users\acer\desktop\testsdl\src\vender\tinyxml-master\tinyxmlparser.cpp
 	<ctype.h>
 	<stddef.h>
 	"tinyxml.h"
 	<windows.h>
 
-1680113671 source:c:\users\acer\desktop\testsdl\src\map\mapparser.cpp
+1680773138 source:c:\users\acer\desktop\testsdl\src\map\mapparser.cpp
 	"MapParser.h"
 	"SoundManager.h"
 
-1680113421 c:\users\acer\desktop\testsdl\src\map\mapparser.h
+1680762775 c:\users\acer\desktop\testsdl\src\map\mapparser.h
 	<map>
 	<string>
 	"GameMap.h"
@@ -586,10 +587,10 @@
 	"Vector2D.h"
 	"Engine.h"
 
-1679686021 source:c:\users\acer\desktop\testsdl\src\camera\camera.cpp
+1680813553 source:c:\users\acer\desktop\testsdl\src\camera\camera.cpp
 	"Camera.h"
 
-1679681892 source:c:\users\acer\desktop\testsdl\src\collision\collision.cpp
+1681163749 source:c:\users\acer\desktop\testsdl\src\collision\collision.cpp
 	"Collision.h"
 	"Engine.h"
 
@@ -606,7 +607,7 @@
 1678209380 c:\users\acer\desktop\testsdl\src\graphics\screensize.h
 	"SDL.h"
 
-1678951150 source:c:\users\acer\desktop\testsdl\src\character\boss1.cpp
+1680812174 source:c:\users\acer\desktop\testsdl\src\character\boss1.cpp
 	"Boss1.h"
 	"TextureManager.h"
 	"SDL.h"
@@ -615,13 +616,13 @@
 	"Collision.h"
 	"Collider.h"
 
-1678949983 c:\users\acer\desktop\testsdl\src\character\boss1.h
+1680178443 c:\users\acer\desktop\testsdl\src\character\boss1.h
 	"Character.h"
 	"Animation.h"
 	"Rigidbody.h"
 	"Collider.h"
 
-1678951198 source:c:\users\acer\desktop\testsdl\src\character\boss2.cpp
+1680812174 source:c:\users\acer\desktop\testsdl\src\character\boss2.cpp
 	"Boss2.h"
 	"TextureManager.h"
 	"SDL.h"
@@ -630,18 +631,35 @@
 	"Collision.h"
 	"Collider.h"
 
-1678949783 c:\users\acer\desktop\testsdl\src\character\boss2.h
+1680178443 c:\users\acer\desktop\testsdl\src\character\boss2.h
 	"Character.h"
 	"Animation.h"
 	"Rigidbody.h"
 	"Collider.h"
 
-1680111992 source:c:\users\acer\desktop\testsdl\src\sounds\soundmanager.cpp
+1680832408 source:c:\users\acer\desktop\testsdl\src\sounds\soundmanager.cpp
 	"SoundManager.h"
 
-1680111229 c:\users\acer\desktop\testsdl\src\sounds\soundmanager.h
+1680758333 c:\users\acer\desktop\testsdl\src\sounds\soundmanager.h
 	<map>
 	<string>
 	<iostream>
 	<SDL_mixer.h>
+
+1680718715 source:c:\users\acer\desktop\testsdl\src\states\menu.cpp
+	"Menu.h"
+	"Engine.h"
+	"Input.h"
+
+1680719412 c:\users\acer\desktop\testsdl\src\states\menu.h
+	"SDL.h"
+	<iostream>
+	"GameState.h"
+
+1680718715 c:\users\acer\desktop\testsdl\src\states\gamestate.h
+
+1680718702 source:c:\users\acer\desktop\testsdl\src\states\play.cpp
+	"Play.h"
+
+1680718702 c:\users\acer\desktop\testsdl\src\states\play.h
 

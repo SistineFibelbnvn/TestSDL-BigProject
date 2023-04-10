@@ -34,8 +34,8 @@ bool Engine::Init()
     m_LevelMap=MapParser::GetInstance()->GetMaps("MAP");
     TextureManager::GetInstance()->ParseTexture("images/Textures.tml");
     TextureManager::GetInstance()->ParseSound("images/Sounds.tml");
-    player=new Waifu(new Properties("SistineFibel",100,3*GetScreenHeight()-400));
-    boss1=new Boss1(new Properties("Ice",GetScreenWidth()/2+4800,2*GetScreenHeight()-500));
+    player=new Waifu(new Properties("SistineFibel",40,5800)); //50 5800
+    boss1=new Boss1(new Properties("Ice",5800,2*GetScreenHeight()-300));
     boss2=new Boss2(new Properties("Fire",GetScreenWidth()/2,GetScreenHeight()-400));
     m_GameObject.push_back(player);
     m_GameObject.push_back(boss1);
@@ -71,10 +71,26 @@ void Engine::Render()
 {
     SDL_SetRenderDrawColor(m_Renderer,230, 230, 255, 130);
     SDL_RenderClear(m_Renderer);
-    TextureManager::GetInstance()->Draw("Ice",GetScreenWidth()*0,1*GetScreenHeight(),GetScreenWidth()*3+800,GetScreenHeight());
-    TextureManager::GetInstance()->Draw("SatanBg",GetScreenWidth()*0,0*GetScreenHeight(),GetScreenWidth()*3+800,GetScreenHeight());
+    TextureManager::GetInstance()->Draw("Ice",GetScreenWidth()*0,1*GetScreenHeight(),6400,GetScreenHeight());
+    TextureManager::GetInstance()->Draw("Sky",GetScreenWidth()*0,2*GetScreenHeight(),6400,GetScreenHeight());
+    TextureManager::GetInstance()->Draw("SatanBg",0,0,6400,GetScreenHeight());
+    TextureManager::GetInstance()->Draw("Tutorial",0,5200,1280,720);
+    TextureManager::GetInstance()->Draw("D",50,5400,1280,720);
+    TextureManager::GetInstance()->Draw("A",1280,5100,1280,720);
+    TextureManager::GetInstance()->Draw("P",100,5000,1280,720);
+    TextureManager::GetInstance()->Draw("J",1280*2+100,6200,1280,720);
+    TextureManager::GetInstance()->Draw("K",1280*3,6200,1280,720);
+    TextureManager::GetInstance()->Draw("L",1280*4+100,6150,1280,720);
+    TextureManager::GetInstance()->Draw("Space",1280*2,5200,1280,720);
+    TextureManager::GetInstance()->Draw("Go",1280,6400,1280,720);
+    TextureManager::GetInstance()->Draw("Win",1280*4,5200,1280,720);
+    TextureManager::GetInstance()->Draw("PS",1280*3,5200,1280,720);
+    TextureManager::GetInstance()->Draw("Esc",0,6000,1280,720);
+    TextureManager::GetInstance()->Draw("Skill",1280*2,6000,1280,720);
+    TextureManager::GetInstance()->Draw("Skill",1280*3,6000,1280,720);
+    TextureManager::GetInstance()->Draw("Skill",1280*4,6000,1280,720);
     for(int i=0;i<=3;i++){
-    TextureManager::GetInstance()->Draw("Castle",GetScreenWidth()*i,2*GetScreenHeight(),GetScreenWidth(),GetScreenHeight());}
+    TextureManager::GetInstance()->Draw("Castle",2000*i,3*GetScreenHeight(),2000,GetScreenHeight());}
     m_LevelMap->Render();
     for(unsigned int i=0;i!=m_GameObject.size();i++){m_GameObject[i]->Draw();}
     SDL_RenderPresent(m_Renderer);

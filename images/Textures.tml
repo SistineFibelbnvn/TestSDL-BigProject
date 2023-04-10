@@ -17,6 +17,20 @@
 <texture id="Castle" source="images/maps/Castle.png"/>
 <texture id="SatanBg" source="images/maps/SatanBg.png"/>
 <texture id="Ice" source="images/maps/Ice.png"/>
+<texture id="Sky" source="images/maps/Sky.png"/>
+<texture id="Tutorial" source="images/maps/Tutorial.png"/>
+<texture id="A" source="images/maps/A.png"/>
+<texture id="D" source="images/maps/D.png"/>
+<texture id="J" source="images/maps/J.png"/>
+<texture id="K" source="images/maps/K.png"/>
+<texture id="L" source="images/maps/L.png"/>
+<texture id="Esc" source="images/maps/Esc.png"/>
+<texture id="Space" source="images/maps/Space.png"/>
+<texture id="PS" source="images/maps/PS.png"/>
+<texture id="Skill" source="images/maps/Skill.png"/>
+<texture id="Win" source="images/maps/Win.png"/>
+<texture id="P" source="images/maps/P.png"/>
+<texture id="Go" source="images/maps/Go.png"/>
 
 <texture id="B1Attack" source="images/Boss1/B1Attack.png"/>
 <texture id="B1Death" source="images/Boss1/B1Death.png"/>

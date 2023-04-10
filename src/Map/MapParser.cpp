@@ -78,7 +78,7 @@ TileLayer* MapParser::ParseTileLayer(TiXmlElement* xmlLayer, Tilesetlist Tileset
     std::string matrix(data->GetText());
     std::istringstream iss(matrix);
     std::string id;
-    Tilemap tilemap(rowcount, std::vector<int>(colcount,0 ));
+    Tilemap tilemap(rowcount, std::vector<int>(colcount, 0));
     for(int row = 0;row < rowcount; row++){
         for(int col = 0;col < colcount; col++){
             getline(iss, id, ',');
