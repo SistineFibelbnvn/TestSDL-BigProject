@@ -52,6 +52,7 @@ void Waifu::Update(float dt)
 
     if(Input::GetInstance()->GetKeyDown(SDL_SCANCODE_ESCAPE)){
         Engine::GetInstance()->Quit();
+        std::cout<<"Give up here, you lose everything!"<<std::endl<<"The treasure is right in front of your eyes"<<std::endl<<"It's a pity you weren't chosen"<<std::endl<<"Nice try! And Goodbye :( ";
     }
     m_IsRunning=false;
     m_IsCrouching=false;
@@ -90,31 +91,23 @@ void Waifu::Update(float dt)
         m_RunSound2-=1.0;
     }
 
-    if(Input::GetInstance()->GetKeyDown(SDL_SCANCODE_J)&&!m_IsWalling&&m_AttackSound<=0){
+    if(Input::GetInstance()->GetKeyDown(SDL_SCANCODE_J)&&!m_IsWalling&&m_AttackSound<=0&&!m_IsRunning){
         m_IsAttacking=true;
-        if(m_Flip==SDL_FLIP_NONE) m_Rigidbody->ApplyForceX(1*FORWARD);
-        else  m_Rigidbody->ApplyForceX(1*BACKWARD);
         if(!m_IsSoundEffect&&m_IsGrounded) {SoundManager::GetInstance()->PlayEffect("Attack");m_IsSoundEffect=true;}
         m_AttackSound=ATTACK_SOUND;
     }
-    if(Input::GetInstance()->GetKeyDown(SDL_SCANCODE_J)&&!m_IsWalling&&m_AttackSound>0){
+    if(Input::GetInstance()->GetKeyDown(SDL_SCANCODE_J)&&!m_IsWalling&&m_AttackSound>0&&!m_IsRunning){
         m_IsAttacking=true;
-        if(m_Flip==SDL_FLIP_NONE) m_Rigidbody->ApplyForceX(1*FORWARD);
-        else  m_Rigidbody->ApplyForceX(1*BACKWARD);
         m_AttackSound-=1.0;
     }
 
-    if(Input::GetInstance()->GetKeyDown(SDL_SCANCODE_K)&&!m_IsWalling&&m_DashAttackSound<=0){
+    if(Input::GetInstance()->GetKeyDown(SDL_SCANCODE_K)&&!m_IsWalling&&m_DashAttackSound<=0&&!m_IsRunning){
         m_IsDashAttacking=true;
-        if(m_Flip==SDL_FLIP_NONE) m_Rigidbody->ApplyForceX(1*FORWARD);
-        else  m_Rigidbody->ApplyForceX(1*BACKWARD);
         if(!m_IsSoundEffect) {SoundManager::GetInstance()->PlayEffect("DashAttack");m_IsSoundEffect=true;}
         m_DashAttackSound=DASH_ATTACK_SOUND;
     }
-    if(Input::GetInstance()->GetKeyDown(SDL_SCANCODE_K)&&!m_IsWalling&&m_DashAttackSound>0){
+    if(Input::GetInstance()->GetKeyDown(SDL_SCANCODE_K)&&!m_IsWalling&&m_DashAttackSound>0&&!m_IsRunning){
         m_IsDashAttacking=true;
-        if(m_Flip==SDL_FLIP_NONE) m_Rigidbody->ApplyForceX(1*FORWARD);
-        else  m_Rigidbody->ApplyForceX(1*BACKWARD);
         m_DashAttackSound-=dt;
     }
     /*if(Input::GetInstance()->GetKeyDown(SDL_SCANCODE_W)&&!m_IsWalling&&!m_IsJumping&&!m_IsFalling){
@@ -154,7 +147,7 @@ void Waifu::Update(float dt)
 
     if(m_Transform->X>=1760&&m_Transform->X<=1800&&m_Transform->Y<=3140&&m_Transform->Y>=3130) {m_Transform->X=4000;m_Transform->Y=6600;}
 
-    if(m_Transform->X<=-20&&m_Transform->Y<=2600&&m_Transform->Y>=2550) {m_Transform->X=3000;m_Transform->Y=6600;}
+    if(m_Transform->X<=-20&&m_Transform->Y<=2630&&m_Transform->Y>=2550) {m_Transform->X=3000;m_Transform->Y=6600;}
 
     if(m_Transform->X>=3000&&m_Transform->X<=4000&&m_Transform->Y>=6820) {m_Transform->X=0;m_Transform->Y=2600;}
 
@@ -164,12 +157,22 @@ void Waifu::Update(float dt)
 
     if(m_Transform->X>=1000&&m_Transform->X<=3000&&m_Transform->Y>=6820) {m_Transform->X=40;m_Transform->Y=3000;}
 
-    if(m_Transform->X>=6350&&m_Transform->Y>=3*Engine::GetInstance()->GetScreenHeight()-200&&m_Transform->Y<=4*Engine::GetInstance()->GetScreenHeight()-200) {m_Transform->X=50;m_Transform->Y=2*Engine::GetInstance()->GetScreenHeight()-500;}
+    if(m_Transform->X>=6350&&m_Transform->Y>=3*Engine::GetInstance()->GetScreenHeight()-200&&m_Transform->Y<=4*Engine::GetInstance()->GetScreenHeight()-200)
+        {m_Transform->X=50;m_Transform->Y=2*Engine::GetInstance()->GetScreenHeight()-500;SoundManager::GetInstance()->PauseMusic();SoundManager::GetInstance()->PlayMusic("Boss1");}
 
-    if(m_Transform->X>=6350&&m_Transform->Y>=2*Engine::GetInstance()->GetScreenHeight()-200&&m_Transform->Y<=3*Engine::GetInstance()->GetScreenHeight()-200) {m_Transform->X=50;m_Transform->Y=1*Engine::GetInstance()->GetScreenHeight()-200;}
+    if(m_Transform->X>=6350&&m_Transform->Y>=2*Engine::GetInstance()->GetScreenHeight()-200&&m_Transform->Y<=3*Engine::GetInstance()->GetScreenHeight()-200)
+        {m_Transform->X=50;m_Transform->Y=1*Engine::GetInstance()->GetScreenHeight()-300;SoundManager::GetInstance()->PauseMusic();SoundManager::GetInstance()->PlayMusic("Boss2");}
 
-    if(m_Transform->Y>=2*Engine::GetInstance()->GetScreenHeight()+600&&m_Transform->Y<=3*Engine::GetInstance()->GetScreenHeight()-300)
+    if(m_Transform->X>=6350&&m_Transform->Y<=2000)
+        {m_Transform->X=50;m_Transform->Y=5*Engine::GetInstance()->GetScreenHeight()-200;SoundManager::GetInstance()->PauseMusic();SoundManager::GetInstance()->PlayMusic("Win");}
+
+    if(m_Transform->X>=6350&&m_Transform->Y>=5*Engine::GetInstance()->GetScreenHeight()-200&&m_Transform->Y<=6*Engine::GetInstance()->GetScreenHeight()-200)
+        {std::cout<<"I appreciate your persistence"<<std::endl<<"You are the Hero in the real world"<<std::endl<<"Thank for your playing!";
+        SDL_OpenURL("https://drive.google.com/drive/u/0/folders/1UoGI0OWgclkxiLUaJx2I_SVDyAdzA2oN");Engine::GetInstance()->Quit();}
+
+    if(m_Transform->Y>=2*Engine::GetInstance()->GetScreenHeight()+600&&m_Transform->Y<=3*Engine::GetInstance()->GetScreenHeight()-200)
         {m_Transform->X=50;m_Transform->Y=2*Engine::GetInstance()->GetScreenHeight()-500;}
+
     if(Input::GetInstance()->GetKeyDown(SDL_SCANCODE_P)||(m_Transform->Y>=4*Engine::GetInstance()->GetScreenHeight()-150&&m_Transform->Y<=5*Engine::GetInstance()->GetScreenHeight()-600)) {m_Transform->X=40;m_Transform->Y=3000;}
 
 

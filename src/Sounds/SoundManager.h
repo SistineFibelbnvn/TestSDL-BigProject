@@ -15,6 +15,7 @@ class SoundManager
     public:
         void Clean();
         void PlayMusic(std::string id);
+        void PauseMusic();
         void LoadMusic(std::string id, std::string source);
         void PlayEffect(std::string id);
         void LoadEffect(std::string id,std::string source);

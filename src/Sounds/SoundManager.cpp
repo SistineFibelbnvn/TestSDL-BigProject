@@ -2,14 +2,20 @@
 SoundManager* SoundManager::s_Instance=nullptr;
 SoundManager::SoundManager()
 {
-    if(Mix_OpenAudio(FREQ,MIX_DEFAULT_FORMAT,2,CHUNK_SIZE)<0)
-        std::cerr<<Mix_GetError()<<std::endl;
+    Mix_OpenAudio(FREQ,MIX_DEFAULT_FORMAT,2,CHUNK_SIZE);
 }
 
 void SoundManager::PlayMusic(std::string id)
 {
-    if(Mix_PlayMusic(m_MusicMap[id],-1)==-1)
-        std::cerr<<Mix_GetError()<<": "<<id<<std::endl;
+    Mix_PlayMusic(m_MusicMap[id],-1);
+}
+
+void SoundManager::PauseMusic()
+{
+    if( Mix_PausedMusic()==1)
+        Mix_ResumeMusic();
+    else
+        Mix_PauseMusic();
 }
 
 void SoundManager::LoadMusic(std::string id, std::string source)
@@ -17,14 +23,11 @@ void SoundManager::LoadMusic(std::string id, std::string source)
     Mix_Music* music =Mix_LoadMUS(source.c_str());
     if(music!=nullptr)
         m_MusicMap[id]=music;
-    else
-        std::cerr<<Mix_GetError()<<": "<<source<<std::endl;
 }
 
 void SoundManager::PlayEffect(std::string id)
 {
-    if(Mix_PlayChannel(-1,m_EffectMap[id],0)==-1)
-        std::cerr<<Mix_GetError()<<": "<<id<<std::endl;
+    Mix_PlayChannel(-1,m_EffectMap[id],0);
 }
 
 void SoundManager::LoadEffect(std::string id, std::string source)
@@ -32,8 +35,6 @@ void SoundManager::LoadEffect(std::string id, std::string source)
     Mix_Chunk* effect =Mix_LoadWAV(source.c_str());
     if(effect!=nullptr)
         m_EffectMap[id]=effect;
-    else
-        std::cerr<<Mix_GetError()<<": "<<source<<std::endl;
 }
 void SoundManager::Clean()
 {

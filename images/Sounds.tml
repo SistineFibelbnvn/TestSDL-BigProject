@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Sounds>	
 <music id="track" source ="images/maps/track.ogg"/>
+<music id="Boss1" source ="images/maps/Boss1.ogg"/>
+<music id="Boss2" source ="images/maps/Boss2.ogg"/>
+<music id="Win" source ="images/maps/Win.ogg"/>
 <effect id="Jumping" source ="images/Character/Jumping.ogg"/>
 <effect id="Sliding" source ="images/Character/Sliding.ogg"/>
 <effect id="Attack" source ="images/Character/Attack.ogg"/>

@@ -16,6 +16,7 @@ class Boss1: public Character
         bool m_IsWalking;
         bool m_IsAttacking;
         bool m_IsDeath;
+        Boss1();
     private:
         Collider* m_Collider;
         Animation* m_Animation;

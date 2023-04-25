@@ -34,9 +34,9 @@ bool Engine::Init()
     m_LevelMap=MapParser::GetInstance()->GetMaps("MAP");
     TextureManager::GetInstance()->ParseTexture("images/Textures.tml");
     TextureManager::GetInstance()->ParseSound("images/Sounds.tml");
-    player=new Waifu(new Properties("SistineFibel",40,5800)); //50 5800
     boss1=new Boss1(new Properties("Ice",5800,2*GetScreenHeight()-300));
-    boss2=new Boss2(new Properties("Fire",GetScreenWidth()/2,GetScreenHeight()-400));
+    boss2=new Boss2(new Properties("Fire",GetScreenWidth()/2,0));
+    player=new Waifu(new Properties("SistineFibel",40,5800)); //40 5800 //3000 1600
     m_GameObject.push_back(player);
     m_GameObject.push_back(boss1);
     m_GameObject.push_back(boss2);
@@ -61,7 +61,7 @@ void Engine::Quit()
 
 void Engine::Update()
 {
-    float dt = Timer::GetInstance()->GetDeltaTime();
+    float dt=Timer::GetInstance()->GetDeltaTime();
     m_LevelMap->Update();
     for(unsigned int i=0;i!=m_GameObject.size();i++){m_GameObject[i]->Update(dt);}
     Camera::GetInstance()->Update(dt);
@@ -85,7 +85,7 @@ void Engine::Render()
     TextureManager::GetInstance()->Draw("Go",1280,6400,1280,720);
     TextureManager::GetInstance()->Draw("Win",1280*4,5200,1280,720);
     TextureManager::GetInstance()->Draw("PS",1280*3,5200,1280,720);
-    TextureManager::GetInstance()->Draw("Esc",0,6000,1280,720);
+    TextureManager::GetInstance()->Draw("Esc",40,6050,1280,720);
     TextureManager::GetInstance()->Draw("Skill",1280*2,6000,1280,720);
     TextureManager::GetInstance()->Draw("Skill",1280*3,6000,1280,720);
     TextureManager::GetInstance()->Draw("Skill",1280*4,6000,1280,720);
